@@ -3,30 +3,46 @@
 
 This project develops a hand gesture recognition model using a dataset of hand gestures. The model can be used for intuitive human-computer interaction and gesture-based control systems.
 
-## Directory Structure
+# Gesture Recognition using Convolutional Neural Networks
 
-- `data/`: Contains the dataset.
-- `notebooks/`: Jupyter notebooks for data exploration and model training.
-- `src/`: Source code for data preprocessing, model creation, and inference.
-- `saved_models/`: Directory to save trained models.
-- `requirements.txt`: List of dependencies.
-- `README.md`: Project description.
+This project aims to recognize hand gestures using a Convolutional Neural Network (CNN). The dataset used is the LeapGestRecog dataset, which contains images of different hand gestures.
 
-## Steps to Run the Project
+## Project Structure
 
-1. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+.
+├── data
+│ └── leapGestRecog
+│ ├── 00
+│ │ ├── frame_00_0000.png
+│ │ ├── ...
+│ ├── 01
+│ │ ├── frame_01_0000.png
+│ │ ├── ...
+│ └── ...
+├── gesture_model.h5
+├── main.py
+└── README.md
 
-2. Unzip the dataset into the `data/` directory.
+- `data/leapGestRecog`: Directory containing the dataset.
+- `gesture_model.h5`: The trained model saved in HDF5 format.
+- `main.py`: Main script to load data, train the model, and evaluate performance.
+- `README.md`: This readme file.
 
-3. Run the Jupyter notebooks for data exploration and model training.
+## Requirements
 
-4. Use the scripts in `src/` for data preprocessing, model creation, and inference.
+- Python 3.x
+- OpenCV
+- NumPy
+- Matplotlib
+- Keras
+- TensorFlow
+- scikit-learn
 
-## Dataset
+Install the required packages using the following command:
 
+```bash
+pip install opencv-python-headless numpy matplotlib keras tensorflow scikit-learn
+```
 Download the dataset from [Kaggle](https://www.kaggle.com/gti-upm/leapgestrecog) and unzip it into the `data/` directory.
 
 ## Outputs
